@@ -10,7 +10,7 @@
       },
       "root": "apps/app",
       "sourceRoot": "apps/app/src",
-      "prefix": "frontend",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
