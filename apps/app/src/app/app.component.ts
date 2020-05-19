@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { ModalService } from './shared/services/modal.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,32 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Task Tracker';
+
+  constructor(public modalService: ModalService) {
+  }
+
   links = [
 
-    { path: '/', icon: 'home', title: 'Home'},
+    { path: '/student', icon: 'assignment', title: 'Assigned'},
 
-    { path: '/customers', icon: 'face', title: 'Customer'},
+    { path: '/inReview', icon: 'visibility', title: 'Reviewing'},
 
-    { path: '/projects', icon: 'work', title: 'Projects'},
+    { path: '/completed', icon: 'assignment_turned_in', title: 'Completed'},
+
+    { path: '/rejected', icon: 'highlight_off', title: 'Rejected'},
+
+    { path: '/teacher', icon: 'assignment', title: 'Assign'},
+
+    { path: '/forReview', icon: 'find_in_page', title: 'To Review'},
 
   ]
+
+  viewProfile(content) {
+    this.modalService.open(content);
+  }
+
+  saveProfile() {
+    this.modalService.userAction('save');
+  }
 }

@@ -1,0 +1,65 @@
+<form [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          id="firstName"
+          formControlName="firstName"
+          name="firstName"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          id="lastName"
+          formControlName="lastName"
+          name="lastName"
+          class="form-control"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <label for="uniqueId">Unique ID</label>
+        <input
+          id="uniqueId"
+          name="uniqueId"
+          formControlName="uniqueId"
+          class="form-control"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="form-group">
+        <label for="mobile">Phone</label>
+        <input
+          id="mobile"
+          name="mobile"
+          formControlName="mobile"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+          [email]="true"
+        />
+      </div>
+    </div>
+  </div>
+</form>
